@@ -1,7 +1,4 @@
-![logo](https://static.wanted.co.kr/images/events/3178/58ac3248.jpg)
-
-# 프로젝트명
-프로젝트 관련 설명
+# Spring Boot 3.0 Skeleton Project
 
 <br/>
 
