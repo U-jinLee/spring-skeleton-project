@@ -4,42 +4,44 @@
 
 ## Table of Contents
 - [개요](#개요)
-- [Skils](#skils)
+- [Skill](#Skill)
 - [Installation](#Installation)
 - [Running Tests](#running-tests)
 - [API Reference](#api-reference)
 - [프로젝트 진행 및 이슈 관리](#프로젝트-진행-및-이슈-관리)
 - [구현과정(설계 및 의도)](#구현과정(설계-및-의도))
 - [TIL 및 회고](#til-및-회고)
-- [Authors](#authors)
+- [Authors(Optional)](#Authors(Optional))
 - [References](#references)
 
 <br/>
 
 
 ## 개요
-이 서비스가 어떠한 배경에서 발견한 문제상황을 해결하기 위해 시작되었는지 및 어떠한 방법으로 해당 문제를 해결하려 하는지 등 ... To use a badge:
-- Via Github
-    1. Press `Ctrl` + `f` on your keyboard, to bring out the search modal.
-    1. Enter the name of the badge you need.
-    1. Copy the appropriate `![Name](link)` element and paste it in your Markdown file (e.g. README.md)
-- You could also visit the live site at [ileriayo.github.io/markdown-badges/](https://ileriayo.github.io/markdown-badges/)
+이 서비스가 어떠한 배경에서 발견한 문제상황을 해결하기 위해 시작되었는지 및 어떠한 방법으로 해당 문제를 해결하려 하는지 등...
+
+`주요기능`
+> 1. 해당 프로젝트가 어떠한 기능을 하는지를 이곳에 간단히 정리
 
 <br/>
 
 
-## Skils
-가상환경: ![Static Badge](https://img.shields.io/badge/Conda-green)<br/>
-언어 및 프레임워크: ![Static Badge](https://img.shields.io/badge/JAVA-17-green) ![Static Badge](https://img.shields.io/badge/Spring_boot-REST-green)<br/>
-데이터 베이스: ![Static Badge](https://img.shields.io/badge/Postgresql-9.2.4-blue) <br/>
-배포 : ![Static Badge](https://img.shields.io/badge/Docker-039BC6) ![Static Badge](https://img.shields.io/badge/AWS-EC2-orange) ![Static Badge](https://img.shields.io/badge/Github-Actions-black)  <br/> ETC : ![Static Badge](https://img.shields.io/badge/Celery-black) ![Static Badge](https://img.shields.io/badge/Redis-red)
+## Skill
+<div align="center">
+<img src="https://img.shields.io/badge/Java 17-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white"/></a>
+<img src="https://img.shields.io/badge/Spring Boot 3-6DB33F?style=for-the-badge&logo=spring&logoColor=white"/></a>
+<img src="https://img.shields.io/badge/Spring Data JPA-gray?style=for-the-badge&logoColor=white"/></a>
+<img src="https://img.shields.io/badge/Junit-25A162?style=for-the-badge&logo=JUnit5&logoColor=white"/></a>
+</div>
+
+<div align="center">
+<img src="https://img.shields.io/badge/asciidoctor-E40046?style=for-the-badge&logo=asciidoctor&logoColor=white"/></a>
+</div>
 
 <br/>
 
 
 ## Installation
-
-Install my-project with npm
 
 ```bash
   # Package 설치
@@ -57,13 +59,11 @@ Install my-project with npm
 ## Running Tests
 
 To run tests, run the following command
-
 ```bash
   ./gradlew test
 ```
-
-> Coverage ScreenShot ![Static Badge](https://img.shields.io/badge/Test_Passed-20/20-green)
-![coverage](https://user-images.githubusercontent.com/48683566/56673924-0b84ae00-66b1-11e9-93ac-fb76ff96a5a0.png)
+> ![Static Badge](https://img.shields.io/badge/Test_Passed-10/10-green)<br/>
+> ![coverage](https://user-images.githubusercontent.com/48683566/56673924-0b84ae00-66b1-11e9-93ac-fb76ff96a5a0.png)
 
 <br/>
 
@@ -230,11 +230,25 @@ To run tests, run the following command
 <br/>
 
 
-## Authors
-
-- [@user1](https://www.github.com/2)
-- [@user2](https://www.github.com/2)
-- [@user3](https://www.github.com/2)
+## Authors(Optional)
+<div align="center">
+    <table>
+        <tr>
+            <th>이유진</th>
+            <th>팀원</th>
+            <th>팀원</th>
+            <th>팀원</th>
+            <th>팀원</th>
+        </tr>
+        <tr>
+            <td><a href="https://github.com/U-jinLee">@U-jinLee</a></td>
+            <td><a href="https://github.com/team1">@team1</a></td>
+            <td><a href="https://github.com/team2">@team2</a></td>
+            <td><a href="https://github.com/team3">@team3</a></td>
+            <td><a href="https://github.com/team4">@team4</a></td>
+        </tr>
+    </table>
+</div>
 
 <br/>
 
