@@ -1,6 +1,7 @@
 package com.example.skeleton.domain.authority.dto;
 
 import com.example.skeleton.domain.authority.entity.Member;
+import jakarta.validation.constraints.Email;
 import lombok.Getter;
 
 public class SignUpDto {
@@ -8,6 +9,7 @@ public class SignUpDto {
 
     @Getter
     public static class Request {
+        @Email
         private String email;
         private String password;
 
