@@ -20,25 +20,20 @@ public class SignUpDto {
 
     }
 
+    @Getter
     public static class Response {
         private long id;
         private String email;
+        private boolean enabled;
 
-        public Response(long id, String email) {
+        public Response(long id, String email, boolean enabled) {
             this.id = id;
             this.email = email;
+            this.enabled = enabled;
         }
 
         public static SignUpDto.Response newInstance(Member member) {
-            return new SignUpDto.Response(member.getId(), member.getEmail());
-        }
-
-        public long getId() {
-            return id;
-        }
-
-        public String getEmail() {
-            return this.email;
+            return new SignUpDto.Response(member.getId(), member.getEmail(), member.isEnabled());
         }
 
     }
