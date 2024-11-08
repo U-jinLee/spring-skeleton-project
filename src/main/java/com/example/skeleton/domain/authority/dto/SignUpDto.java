@@ -33,7 +33,7 @@ public class SignUpDto {
         }
 
         public static SignUpDto.Response newInstance(Member member) {
-            return new SignUpDto.Response(member.getId(), member.getEmail(), member.isEnabled());
+            return new SignUpDto.Response(member.getId(), member.getEmail(), member.getEnabled());
         }
 
     }

@@ -53,7 +53,7 @@ class AuthenticationApiControllerTest extends IntegrationTest {
         Member member = Member.builder()
                 .email(email)
                 .password(passwordEncoder.encode(password))
-                .role(Role.USER)
+                .role(Role.ROLE_USER)
                 .enabled(true)
                 .build();
 

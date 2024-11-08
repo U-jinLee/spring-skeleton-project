@@ -19,6 +19,7 @@ public class SignInDto {
 
     }
 
+    @Getter
     public static class Response {
         private String accessToken;
         private String refreshToken;
@@ -32,13 +33,6 @@ public class SignInDto {
             return new SignInDto.Response(accessToken, refreshToken);
         }
 
-        public String getAccessToken() {
-            return this.accessToken;
-        }
-
-        public String getRefreshToken() {
-            return this.refreshToken;
-        }
     }
 
 }

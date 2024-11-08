@@ -2,8 +2,14 @@ package com.example.skeleton.domain.authority.entity;
 
 import jakarta.persistence.*;
 import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
 
+@ToString
+@Getter
 @Table(name = "member")
+@NoArgsConstructor
 @Entity
 public class Member {
 
@@ -20,6 +26,7 @@ public class Member {
     @Enumerated(EnumType.STRING)
     private Role role;
 
+    @Column(name = "enabled")
     private Boolean enabled;
 
     @Builder
@@ -28,33 +35,6 @@ public class Member {
         this.password = password;
         this.role = role;
         this.enabled = enabled;
-    }
-
-    public long getId() {
-        return this.id;
-    }
-
-    public String getEmail() {
-        return this.email;
-    }
-
-    public String getPassword() {return this.password;}
-
-
-    public Role getRole() {
-        return this.role;
-    }
-
-    public Boolean isEnabled() {
-        return this.enabled;
-    }
-
-    @Override
-    public String toString() {
-        return "Member{" +
-                "id=" + id +
-                ", email='" + email + '\'' +
-                '}';
     }
 
 }
