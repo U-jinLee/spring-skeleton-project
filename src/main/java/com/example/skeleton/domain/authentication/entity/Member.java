@@ -1,4 +1,4 @@
-package com.example.skeleton.domain.authority.entity;
+package com.example.skeleton.domain.authentication.entity;
 
 import jakarta.persistence.*;
 import lombok.Builder;

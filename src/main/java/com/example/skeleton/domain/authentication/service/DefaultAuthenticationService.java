@@ -1,12 +1,12 @@
-package com.example.skeleton.domain.authority.service;
+package com.example.skeleton.domain.authentication.service;
 
-import com.example.skeleton.domain.authority.dto.SignInDto;
-import com.example.skeleton.domain.authority.dto.SignUpDto;
-import com.example.skeleton.domain.authority.entity.Member;
-import com.example.skeleton.domain.authority.entity.Role;
-import com.example.skeleton.domain.authority.exception.MemberNotFoundException;
-import com.example.skeleton.domain.authority.exception.PasswordNotMatchException;
-import com.example.skeleton.domain.authority.repository.MemberRepository;
+import com.example.skeleton.domain.authentication.dto.SignInDto;
+import com.example.skeleton.domain.authentication.dto.SignUpDto;
+import com.example.skeleton.domain.authentication.entity.Member;
+import com.example.skeleton.domain.authentication.entity.Role;
+import com.example.skeleton.domain.authentication.exception.MemberNotFoundException;
+import com.example.skeleton.domain.authentication.exception.PasswordNotMatchException;
+import com.example.skeleton.domain.authentication.repository.MemberRepository;
 import com.example.skeleton.global.service.JwtProvider;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.crypto.password.PasswordEncoder;

@@ -1,4 +1,4 @@
-package com.example.skeleton.domain.authority.dto;
+package com.example.skeleton.domain.authentication.dto;
 
 import jakarta.validation.constraints.Email;
 import lombok.Getter;

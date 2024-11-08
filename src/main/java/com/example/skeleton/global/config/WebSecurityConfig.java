@@ -1,7 +1,7 @@
 package com.example.skeleton.global.config;
 
 
-import com.example.skeleton.domain.authority.entity.Role;
+import com.example.skeleton.domain.authentication.entity.Role;
 import com.example.skeleton.global.filter.JwtFilter;
 import com.example.skeleton.global.service.JwtProvider;
 import lombok.RequiredArgsConstructor;

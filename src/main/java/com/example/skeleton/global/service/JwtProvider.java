@@ -1,6 +1,6 @@
 package com.example.skeleton.global.service;
 
-import com.example.skeleton.domain.authority.entity.Member;
+import com.example.skeleton.domain.authentication.entity.Member;
 import io.jsonwebtoken.*;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;

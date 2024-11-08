@@ -1,4 +1,4 @@
-package com.example.skeleton.domain.authority.exception;
+package com.example.skeleton.domain.authentication.exception;
 
 import com.example.skeleton.global.error.exception.BusinessException;
 import com.example.skeleton.global.error.exception.ErrorCode;

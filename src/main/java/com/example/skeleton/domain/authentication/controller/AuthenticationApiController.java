@@ -1,8 +1,8 @@
-package com.example.skeleton.domain.authority.controller;
+package com.example.skeleton.domain.authentication.controller;
 
-import com.example.skeleton.domain.authority.dto.SignInDto;
-import com.example.skeleton.domain.authority.dto.SignUpDto;
-import com.example.skeleton.domain.authority.service.AuthenticationService;
+import com.example.skeleton.domain.authentication.dto.SignInDto;
+import com.example.skeleton.domain.authentication.dto.SignUpDto;
+import com.example.skeleton.domain.authentication.service.AuthenticationService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;

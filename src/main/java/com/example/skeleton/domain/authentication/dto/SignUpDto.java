@@ -1,6 +1,6 @@
-package com.example.skeleton.domain.authority.dto;
+package com.example.skeleton.domain.authentication.dto;
 
-import com.example.skeleton.domain.authority.entity.Member;
+import com.example.skeleton.domain.authentication.entity.Member;
 import jakarta.validation.constraints.Email;
 import lombok.Getter;
 

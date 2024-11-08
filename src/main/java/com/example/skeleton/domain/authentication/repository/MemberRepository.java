@@ -1,6 +1,6 @@
-package com.example.skeleton.domain.authority.repository;
+package com.example.skeleton.domain.authentication.repository;
 
-import com.example.skeleton.domain.authority.entity.Member;
+import com.example.skeleton.domain.authentication.entity.Member;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
