@@ -2,6 +2,7 @@ package com.example.skeleton.global.config;
 
 
 import com.example.skeleton.domain.authentication.entity.Role;
+import com.example.skeleton.domain.authentication.service.CustomOAuth2Service;
 import com.example.skeleton.global.filter.JwtFilter;
 import com.example.skeleton.global.service.JwtProvider;
 import lombok.RequiredArgsConstructor;
@@ -25,6 +26,7 @@ import static org.springframework.boot.autoconfigure.security.servlet.PathReques
 public class WebSecurityConfig {
 
     private final JwtProvider jwtProvider;
+    private final CustomOAuth2Service customOAuth2Service;
 
     @Bean
     public PasswordEncoder passwordEncoder() {
@@ -47,7 +49,8 @@ public class WebSecurityConfig {
                 .authorizeHttpRequests(req ->
                         req
                                 .requestMatchers(new AntPathRequestMatcher("/admin/**")).hasRole(Role.ROLE_ADMIN.getValue())
-                                .requestMatchers(new AntPathRequestMatcher("/api/authentication/**")).permitAll()
+                                .requestMatchers(new AntPathRequestMatcher("/api/authentication/**"),
+                                        new AntPathRequestMatcher("/login")).permitAll()
                                 .anyRequest().authenticated())
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 .and()
@@ -57,6 +60,11 @@ public class WebSecurityConfig {
                 .headers()
                 .frameOptions()
                 .sameOrigin();
+        // OAuth2
+        http
+                .oauth2Login()
+                .userInfoEndpoint(c -> c.userService(customOAuth2Service));
+
 
         return http.build();
     }

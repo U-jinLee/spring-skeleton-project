@@ -5,7 +5,7 @@ import com.example.skeleton.domain.authentication.dto.SignUpDto;
 import com.example.skeleton.domain.authentication.entity.Member;
 import com.example.skeleton.domain.authentication.entity.Role;
 import com.example.skeleton.domain.authentication.exception.MemberNotFoundException;
-import com.example.skeleton.domain.authentication.exception.PasswordNotMatchException;
+import com.example.skeleton.domain.authentication.exception.LoginFailureException;
 import com.example.skeleton.domain.authentication.repository.MemberRepository;
 import com.example.skeleton.global.service.JwtProvider;
 import lombok.RequiredArgsConstructor;
@@ -40,10 +40,11 @@ public class DefaultAuthenticationService implements AuthenticationService {
 
         if (passwordEncoder.matches(request.getPassword(), member.getPassword()) &&
                 Boolean.TRUE.equals(member.getEnabled()))
+
             return SignInDto.Response
                     .newInstance(jwtProvider.createAccessToken(member), jwtProvider.createRefreshToken(member));
 
-        throw new PasswordNotMatchException();
+        throw new LoginFailureException();
     }
 
 }
