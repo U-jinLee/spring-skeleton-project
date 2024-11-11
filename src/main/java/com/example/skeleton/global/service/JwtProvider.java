@@ -19,6 +19,7 @@ import java.util.List;
 @Slf4j
 @Component
 public class JwtProvider {
+    public static final String ACCESS_TOKEN = "access-token";
     private static final String AUTHORITIES_KEY = "auth";
     private final String secretKey;
     private final long accessTokenValidityInMillisecond;
@@ -49,7 +50,7 @@ public class JwtProvider {
 
     private String createToken(Member member, long tokenValidityMillisecond) {
         return Jwts.builder()
-                .setSubject(member.getEmail())
+                .setSubject(member.getSubject())
                 .claim(AUTHORITIES_KEY, member.getRole().name())
                 .setExpiration(new Date(new Date().getTime() + tokenValidityMillisecond))
                 .signWith(this.key, SignatureAlgorithm.HS512)

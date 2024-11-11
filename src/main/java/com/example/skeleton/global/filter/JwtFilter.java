@@ -24,7 +24,7 @@ public class JwtFilter extends OncePerRequestFilter {
             throws ServletException, IOException {
 
         String jwt = parseJwt(request);
-        if (!jwt.isEmpty() && jwtProvider.validate(jwt))
+        if (StringUtils.hasText(jwt) && jwtProvider.validate(jwt))
             SecurityContextHolder.getContext().setAuthentication(jwtProvider.getAuthentication(jwt));
 
         filterChain.doFilter(request, response);

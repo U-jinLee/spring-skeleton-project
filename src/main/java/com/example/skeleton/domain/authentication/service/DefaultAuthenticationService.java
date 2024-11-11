@@ -3,6 +3,7 @@ package com.example.skeleton.domain.authentication.service;
 import com.example.skeleton.domain.authentication.dto.SignInDto;
 import com.example.skeleton.domain.authentication.dto.SignUpDto;
 import com.example.skeleton.domain.authentication.entity.Member;
+import com.example.skeleton.domain.authentication.entity.Registration;
 import com.example.skeleton.domain.authentication.entity.Role;
 import com.example.skeleton.domain.authentication.exception.MemberNotFoundException;
 import com.example.skeleton.domain.authentication.exception.LoginFailureException;
@@ -26,6 +27,7 @@ public class DefaultAuthenticationService implements AuthenticationService {
                 .email(request.getEmail())
                 .password(passwordEncoder.encode(request.getPassword()))
                 .role(Role.ROLE_USER)
+                .registration(Registration.DEFAULT)
                 .enabled(false)
                 .build();
 

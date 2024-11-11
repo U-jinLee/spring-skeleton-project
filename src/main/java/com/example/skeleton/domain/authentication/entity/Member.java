@@ -26,15 +26,27 @@ public class Member {
     @Enumerated(EnumType.STRING)
     private Role role;
 
+    @Enumerated(EnumType.STRING)
+    private Registration registration;
+
     @Column(name = "enabled")
     private Boolean enabled;
 
     @Builder
-    public Member(String email, String password, Role role, boolean enabled) {
+    public Member(String email, String password, Role role, Registration registration, boolean enabled) {
         this.email = email;
         this.password = password;
         this.role = role;
+        this.registration = registration;
         this.enabled = enabled;
+    }
+
+    public String getSubject() {
+        return new StringBuilder()
+                .append(this.email)
+                .append("_")
+                .append(this.registration)
+                .toString();
     }
 
 }

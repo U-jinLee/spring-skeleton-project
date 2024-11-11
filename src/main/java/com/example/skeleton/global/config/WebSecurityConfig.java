@@ -5,6 +5,7 @@ import com.example.skeleton.domain.authentication.entity.Role;
 import com.example.skeleton.domain.authentication.service.CustomOAuth2Service;
 import com.example.skeleton.global.filter.JwtFilter;
 import com.example.skeleton.global.service.JwtProvider;
+import com.example.skeleton.global.service.OAuth2SuccessHandler;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -26,6 +27,7 @@ import static org.springframework.boot.autoconfigure.security.servlet.PathReques
 public class WebSecurityConfig {
 
     private final JwtProvider jwtProvider;
+    private final OAuth2SuccessHandler oAuth2SuccessHandler;
     private final CustomOAuth2Service customOAuth2Service;
 
     @Bean
@@ -63,7 +65,9 @@ public class WebSecurityConfig {
         // OAuth2
         http
                 .oauth2Login()
-                .userInfoEndpoint(c -> c.userService(customOAuth2Service));
+                .successHandler(oAuth2SuccessHandler)
+                .userInfoEndpoint()
+                .userService(customOAuth2Service);
 
 
         return http.build();
