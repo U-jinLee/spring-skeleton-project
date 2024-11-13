@@ -2,15 +2,13 @@ package com.example.skeleton.domain.authentication.controller;
 
 import com.example.skeleton.domain.authentication.dto.SignInDto;
 import com.example.skeleton.domain.authentication.dto.SignUpDto;
+import com.example.skeleton.domain.authentication.dto.ValidateRequestDto;
 import com.example.skeleton.domain.authentication.service.AuthenticationService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RequiredArgsConstructor
 @RequestMapping("/api/authentication")
@@ -36,7 +34,19 @@ public class AuthenticationApiController {
      */
     @PostMapping("/sign-in")
     public ResponseEntity<SignInDto.Response> signIn(@RequestBody @Valid SignInDto.Request request) {
-        return ResponseEntity.ok(authenticationService.signIn(request));
+        return ResponseEntity.ok(this.authenticationService.signIn(request));
+    }
+
+    /**
+     * 가입한 멤버의 계정 활성화
+     * @param email - 활성화할 이메일
+     * @param request - Code 정보
+     * @return HttpStatus.OK
+     */
+    @PostMapping("/{email}/validate")
+    public ResponseEntity<Object> validate(@PathVariable("email") String email, @RequestBody ValidateRequestDto request) {
+        authenticationService.validate(email, request);
+        return ResponseEntity.status(HttpStatus.OK).build();
     }
 
 }

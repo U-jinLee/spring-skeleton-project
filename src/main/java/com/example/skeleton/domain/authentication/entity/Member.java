@@ -49,4 +49,18 @@ public class Member {
                 .toString();
     }
 
+    public void enabled() {
+        this.enabled = true;
+    }
+
+    public static Member newUser(String email, String password) {
+        return Member.builder()
+                .email(email)
+                .password(password)
+                .role(Role.ROLE_USER)
+                .registration(Registration.DEFAULT)
+                .enabled(false)
+                .build();
+    }
+
 }

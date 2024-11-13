@@ -29,6 +29,8 @@ ext {
 def queryDslVersion = '5.0.0'
 
 dependencies {
+    // redis
+    implementation 'org.springframework.boot:spring-boot-starter-data-redis'
     // guava
     implementation 'com.google.guava:guava:32.1.2-jre'
     // oauth2

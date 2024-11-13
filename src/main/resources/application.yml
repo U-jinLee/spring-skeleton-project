@@ -5,7 +5,9 @@ spring:
     console:
       enabled: true
   profiles:
-    include: oauth
+    include:
+      - oauth
+      - redis
 jwt:
   live:
     access: 1800000
