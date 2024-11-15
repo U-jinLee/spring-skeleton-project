@@ -1,4 +1,7 @@
 server:
+  servlet:
+    encoding:
+      force-response: true
   port: 8081
 spring:
   h2:

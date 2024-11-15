@@ -65,6 +65,7 @@ public class WebSecurityConfig {
         // OAuth2
         http
                 .oauth2Login()
+                .loginPage("/login")
                 .successHandler(oAuth2SuccessHandler)
                 .userInfoEndpoint()
                 .userService(customOAuth2Service);
